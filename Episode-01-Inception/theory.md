@@ -51,9 +51,33 @@
 - Write the code in a separate file E.g. `App.js`.
 - Include the JS file in the html.
 
+## Create nested and sibling elements in React
+- To create a **nested** element, give another React element in the `children` param of `React.createElement`.
+- To create **sibling** elements, give multiple React elements as an array in the `children` property of `React.createElement`.
+- While creating above structure, you will following error (**Ignore for now**):
+```
+react.development.js:199 Warning: Each child in a list should have a unique "key" prop.
+
+Check the top-level render call using <div>. See https://reactjs.org/link/warning-keys for more information.
+    at h1
+```
+
+## JSX Intro
+- Although React can be written in JS file (as above), it is recommended to write in JSX.
+- It is a file format which React prefers to avoid the mess while manipulating DOM.
+- Complex the structure gets, complex the JS code becomes.
+- But it is feasible to write React code is a JS file.
+
 
 # Homework
 
 ## How does Browser understand the JS commands?
 ## What are CDN?
 ## What is crossorigin? (Used inside script tag)
+## What happens if multiple render are there? (experiment)
+## What happens to elements above & below the target div? (experiment)
+- It can be applied to a small portion of the page.
+## Can import script tags be moved in head tag of elements?
+## What is difference between development and production level CDN links?
+## What is the difference between a Framework and a library?
+
