@@ -1,0 +1,26 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This project contains all the knowledge acquired from the 'Namaste React' course by 'Akshay Saini'.",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohitslab/namaste-react.git"
+  },
+  "keywords": [
+    "react",
+    "namaste-react"
+  ],
+  "author": "Mohit Soni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohitslab/namaste-react/issues"
+  },
+  "homepage": "https://github.com/mohitslab/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
