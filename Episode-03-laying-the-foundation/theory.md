@@ -92,3 +92,74 @@ etc.
 - Bracket Pair colorizer
 - ES Lint
 - Better comments
+
+## React Components
+- Everything is a component in React.
+- There are two types of components in React:
+    - Class Components (Old)
+    - Functional Components (New)
+- _A **React Functional Component** is a Javascript function that returns a **React Element**._
+- A React Element is equivalent to JSX.
+- Therefore, _A **React Functional Component** is a Javascript function that returns a **React Element** or **JSX**._
+- **Note:** A React Functional Component must start with a capital letter.
+- A Heading Component (Single line)
+```
+const HeadingComponent = () => {
+    return <h1 id="heading">Namaste React Functional Component</h1>
+};
+```
+- A Heading Component (Shorthand)
+```
+const HeadingComponent = () => <h1 id="heading">Namaste React Functional Component using Shorthand</h1>;
+```
+- A Heading Component (Multi line)
+```
+const HeadingComponent = () => (
+    <div id="container">
+        <h1 className="heading">Namaste React Functional Component</h1>
+    </div>
+);
+```
+
+## Render React Functional Components
+- To render components just put the components in a **self closing tag**.
+- Render a component:
+```
+const HeadingComponent = () => (
+    <div id="container">
+        <h1 className="heading">Namaste React Functional Component</h1>
+    </div>
+);
+
+const root = ReactDOM.createRoot(document.createElementById("root"));
+
+// render a component
+root.render(<HeadingComponent />);
+```
+
+## Component Composition
+- **Component Composition** means using two or more React Components together.
+- Component Composition Example:
+```
+const Title = () => (
+    <h1 className="head" tabIndex="5">
+        Namaste React using JSX 🚀
+    </h1>
+);
+
+const HeadingComponent = () => (
+    <div id="container">
+        <Title /> // A React Component used in another React Component
+        <h1 className="heading">Namaste Component Composition 🚀</h1>
+    </div>
+);
+```
+- The `<Title />` will be replaced by its code.
+- Output:
+```
+<div id="container">
+    <h1 class="head" tabindex="5">Namaste React using JSX 🚀</h1>
+    <h1 class="heading">Namaste React Component Composition 🚀</h1>
+</div>
+```
+
