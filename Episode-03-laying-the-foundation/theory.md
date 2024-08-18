@@ -102,6 +102,13 @@ etc.
 - A React Element is equivalent to JSX.
 - Therefore, _A **React Functional Component** is a Javascript function that returns a **React Element** or **JSX**._
 - **Note:** A React Functional Component must start with a capital letter.
+- If you create a React Functional Component starting with a small letter, the Component will not get rendered. Also a warning will be shown.
+```
+Warning: The tag <test> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter.
+    at test
+    at div
+    at ComponentComposition
+```
 - A Heading Component (Single line)
 ```
 const HeadingComponent = () => {
@@ -136,9 +143,11 @@ const root = ReactDOM.createRoot(document.createElementById("root"));
 // render a component
 root.render(<HeadingComponent />);
 ```
+- You can also use like regular HTML tags i.e. `<HeadingComponent></HeadingComponent>`
 
 ## Component Composition
 - **Component Composition** means using two or more React Components together.
+- Using one React Component inside another React Component.
 - Component Composition Example:
 ```
 const Title = () => (
@@ -163,3 +172,76 @@ const HeadingComponent = () => (
 </div>
 ```
 
+## JS in JSX
+- You can run any Javascript code inside JSX by using a curly braces.
+- Expressions, variables, `console.log` etc.
+- You can even render the React Components created in a normal variable.
+- You can do a mix and match of the React Components inside one another.
+- You can use this way to debug also.
+- **Note:** Semi-colon will throw an error as it would not be able to transpile it.
+- It sanitizes the data you put inside. It prevents **Cross-site scripting** attacks.
+- You can also execute Javscript functions inside these curly braces.
+- Example (Variable inside Component):
+```
+const myVariable = 1000;
+
+const HeadingComponent = () => (
+    <div id="container">
+        <Title />
+        {myVariable}
+        <h1 className="heading">Namaste Component Composition 🚀</h1>
+    </div>
+);
+```
+- Example (Expression inside Component):
+```
+const HeadingComponent = () => (
+    <div id="container">
+        <Title />
+        {100 + 200}
+        <h1 className="heading">Namaste Component Composition 🚀</h1>
+    </div>
+);
+```
+- Example (console.log inside Component):
+```
+const HeadingComponent = () => (
+    <div id="container">
+        <Title />
+        {console.log("debug")}
+        <h1 className="heading">Namaste Component Composition 🚀</h1>
+    </div>
+);
+```
+- Example (Variable inside Component):
+```
+const title = (
+    <h1 className="head" tabIndex="5">
+        Namaste React using JSX 🚀
+    </h1>
+);
+
+const HeadingComponent = () => (
+    <div id="container">
+        <Title />
+        {title}
+        <h1 className="heading">Namaste Component Composition 🚀</h1>
+    </div>
+);
+```
+- Example (Function inside Component):
+```
+const title = function () {
+    return (<h1 className="head" tabIndex="5">
+        Namaste React using JSX 🚀
+    </h1>)
+};
+
+const HeadingComponent = () => (
+    <div id="container">
+        <Title />
+        {title()}
+        <h1 className="heading">Namaste Component Composition 🚀</h1>
+    </div>
+);
+```

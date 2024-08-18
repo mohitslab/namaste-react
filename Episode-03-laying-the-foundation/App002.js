@@ -13,10 +13,16 @@ const Title = () => (
     </h1>
 );
 
+// Test Component (not rendered because incorect name)
+const test = () => {
+    return <h2 className="test" id="test">I am a test Component. I have a return statement.</h2>
+}
+
 // Component Composition
 const ComponentComposition = () => (
     <div id="container">
         <Title />
+        <test/>
         <h1 className="heading">Namaste React Component Composition 🚀</h1>
     </div>
 );
