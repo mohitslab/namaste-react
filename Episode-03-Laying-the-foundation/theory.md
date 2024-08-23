@@ -51,9 +51,7 @@ const jsxHeading = <h1>Namaste React using JSX.</h1>;
 ```
 - Elements created using `JSX` is equivalent to elements created using `React.createElement`.
 - `console.log` of `JSX` & `React.createElement`
-- ![alt text](image.png)
-- ![alt text](/home/ranosys/Pictures/Screenshots/namaste_react_001.png)
-- file:///home/ranosys/Pictures/Screenshots/namaste_react_001.png
+- ![heading vs. jsxheading](namaste_react_001.png)
 - Therefore, JSX is just an optimized syntax to write React elements.
 - JSX is not pure javascript.
 - JS Engine does not understand the JSX.
