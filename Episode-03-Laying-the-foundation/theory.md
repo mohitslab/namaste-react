@@ -51,6 +51,7 @@ const jsxHeading = <h1>Namaste React using JSX.</h1>;
 ```
 - Elements created using `JSX` is equivalent to elements created using `React.createElement`.
 - `console.log` of `JSX` & `React.createElement`
+- ![heading vs. jsxheading](namaste_react_001.png)
 - ![alt text](image.png)
 - ![alt text](/home/ranosys/Pictures/Screenshots/namaste_react_001.png)
 - file:///home/ranosys/Pictures/Screenshots/namaste_react_001.png
