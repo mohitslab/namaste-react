@@ -1,3 +1,107 @@
-#heading {
-    color: #123456
+.app {
+    padding: 0vw 5vw;
 }
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    width: 10vw;
+    padding: 2px;
+}
+
+.logo {
+    width: 100%;
+}
+
+.navbar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    padding: 2px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px black solid;
+    border-radius: 5px;
+    max-width: 10vw;
+    padding: 5px;
+    margin: 5px;
+}
+.search-box {
+    border: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.search-icon {
+    padding: 5px;
+}
+
+.navbar-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 15vw;
+    padding: 2px;
+}
+
+.navbar-right ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+
+.navbar-right ul li {
+    display: flex;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.body-container {
+    margin: 5px;
+}
+
+.dish-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: auto;
+}
+
+.dish-container-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dish-container-silder-arrow {
+    display: flex;
+    align-items: center;
+}
+
+.dish-container-silder-arrow svg {
+    margin: 2px;
+}
+
+.dish {
+    width: 10vw;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.dish img {
+    width: 100%;
+}
+

@@ -1,0 +1,31 @@
+## Steps to build a production ready app
+- First step to build any application should be **Planning**.
+- Planning is important and mandatory.
+- Step 1: Create rough mockups
+    - Mockups are rough sketches which show a basic layout of your app.
+- Step 2: Identify components
+    - Generally there will be major 3 components viz. Header, Body and Footer.
+    - Everything will be inside either of these three components.
+- Components:
+    - App
+        - Header
+            - Logo
+            - CustomerLocation
+            - Search
+            - NavBar
+                - NavItems
+                - UserIcon
+                - Cart
+        - Body
+            - DishIntro
+            - DishContainer
+                - DishCard
+            - RestaurantIntro
+            - RestaurantContainer
+                - RestaurantCard
+        - Footer
+            - MiniLogo
+            - Copyright
+            - Company
+            - ContactUs
+            - ServiceLocations
