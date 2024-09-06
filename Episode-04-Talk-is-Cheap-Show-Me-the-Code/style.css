@@ -103,6 +103,7 @@ body {
     width: 10vw;
     height: auto;
     flex-shrink: 0;
+    margin: 5px;
 }
 
 .dish img {
@@ -163,4 +164,3 @@ body {
 .star-and-timing {
     padding: 1px;
 }
-

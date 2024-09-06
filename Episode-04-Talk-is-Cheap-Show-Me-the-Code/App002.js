@@ -5010,75 +5010,66 @@ const Header = () => {
     )
 }
 
-
 const Dish = (props) => {
     const { dishInfo } = props;
 
-    // destructure data
-    const { imageId } = dishInfo;
-
     return (
         <div className="dish">
-            <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/" + imageId} />
+            <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/" + dishInfo.imageId} />
         </div>)
 }
 
 const Restaurant = (props) => {
     const { restaurantInfo } = props;
 
-    // destructure data
-    const {
-        name,
-        avgRating,
-        sla,
-        cuisines,
-        locality,
-        cloudinaryImageId
-    } = restaurantInfo?.info;
-
     return (
         <div className="restaurant">
             <div className="restaurant-image-container">
-                <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/" + cloudinaryImageId} />
+                <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/" + restaurantInfo.cloudinaryImageId} />
             </div>
             <div className="restaurant-info">
-                <p><strong>{name}</strong></p>
-                <span className="star-and-timing"><FontAwesomeIcon icon={faStar} className="star" /><strong>{avgRating} | {sla.slaString}</strong></span>
-                <p>{cuisines.join(", ")}</p>
-                <p>{locality}</p>
+                <p><strong>{restaurantInfo.name}</strong></p>
+                <span className="star-and-timing"><FontAwesomeIcon icon={faStar} className="star" /><strong>{restaurantInfo.avgRating} | {restaurantInfo.sla.slaString}</strong></span>
+                <p>{restaurantInfo.cuisines.join(", ")}</p>
+                <p>{restaurantInfo.locality}</p>
             </div>
         </div>)
 }
 
 const Body = () => {
-    return (
-        <div className="body-container">
-            <div className="dish-container-heading">
-                <div className="dish-container-info">
-                    <h2>Dear, What do you wanna try today?</h2>
-                </div>
-                <div className="dish-container-silder-arrow">
-                    <FontAwesomeIcon icon={faCircleArrowLeft} size="2xl" />
-                    <FontAwesomeIcon icon={faCircleArrowRight} size="2xl" />
-                </div>
+    return <div className="body-container">
+        <div className="dish-container-heading">
+            <div className="dish-container-info">
+                <h2>Dear, What do you wanna try today?</h2>
             </div>
-            <div className="dish-container">
-                {foodData?.card?.card?.gridElements.infoWithStyle.info.map(
-                    dish => <Dish dishInfo={dish} key={dish?.id} />
-                )}
-            </div>
-            <div className="restaurant-container-info">
-                <h2>Top restaurants in the city</h2>
-            </div>
-            <div className="restaurant-container">
-                {restaurantData?.card?.card?.gridElements?.infoWithStyle?.restaurants.map(
-                    restaurant => <Restaurant restaurantInfo={restaurant} key={restaurant?.info?.id} />
-                )};
+            <div className="dish-container-silder-arrow">
+                <FontAwesomeIcon icon={faCircleArrowLeft} size="2xl" />
+                <FontAwesomeIcon icon={faCircleArrowRight} size="2xl" />
             </div>
         </div>
-    )
+        <div className="dish-container">
+            <Dish dishInfo={foodData?.card?.card?.gridElements.infoWithStyle.info[0]} />
+            <Dish dishInfo={foodData?.card?.card?.gridElements.infoWithStyle.info[1]} />
+            <Dish dishInfo={foodData?.card?.card?.gridElements.infoWithStyle.info[2]} />
+            <Dish dishInfo={foodData?.card?.card?.gridElements.infoWithStyle.info[3]} />
+            <Dish dishInfo={foodData?.card?.card?.gridElements.infoWithStyle.info[4]} />
+            <Dish dishInfo={foodData?.card?.card?.gridElements.infoWithStyle.info[5]} />
+            <Dish dishInfo={foodData?.card?.card?.gridElements.infoWithStyle.info[6]} />
+        </div>
+        <div className="restaurant-container-info">
+            <h2>Top restaurants in the city</h2>
+        </div>
+        <div className="restaurant-container">
+            <Restaurant restaurantInfo={restaurantData?.card?.card?.gridElements?.infoWithStyle?.restaurants[0].info} />
+            <Restaurant restaurantInfo={restaurantData?.card?.card?.gridElements?.infoWithStyle?.restaurants[1].info} />
+            <Restaurant restaurantInfo={restaurantData?.card?.card?.gridElements?.infoWithStyle?.restaurants[2].info} />
+            <Restaurant restaurantInfo={restaurantData?.card?.card?.gridElements?.infoWithStyle?.restaurants[3].info} />
+            <Restaurant restaurantInfo={restaurantData?.card?.card?.gridElements?.infoWithStyle?.restaurants[4].info} />
+            <Restaurant restaurantInfo={restaurantData?.card?.card?.gridElements?.infoWithStyle?.restaurants[5].info} />
+            <Restaurant restaurantInfo={restaurantData?.card?.card?.gridElements?.infoWithStyle?.restaurants[6].info} />
+        </div>
+    </div>
 }
-
 const AppLayout = () => {
     return <div className="app">
         {/* Header */}
