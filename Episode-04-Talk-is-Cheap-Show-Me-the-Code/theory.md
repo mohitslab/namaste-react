@@ -199,8 +199,7 @@ const { restaurantInfo } = props;
     - Re-rendering is a big performace hit.
     - **Note:** Never use loop index as unique identifier i.e. `key` because it negatively impact the performance and may cause issues. (TODO: Mentioned in React official documentation)
     - Use index as a last option.
-
-[!Key Warning](key_warning.png)
+![Key Warning](key_warning.png)
 
 ```
 <div className="restaurant-container">
