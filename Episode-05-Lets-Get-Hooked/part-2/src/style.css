@@ -1,5 +1,5 @@
 body {
-    background-color: #F5F5DC;
+    background-color: #faf3e0;
 }
 
 .app {
@@ -103,7 +103,6 @@ body {
     width: 10vw;
     height: auto;
     flex-shrink: 0;
-    margin: 5px;
 }
 
 .dish img {
@@ -114,7 +113,13 @@ body {
     color: gold;
 }
 
-.restaurant-container {
+.restaurant-container-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.restaurant-cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
     gap: 10px;
@@ -129,7 +134,7 @@ body {
     margin: 10px;
 }
 
-.restaurant-container::after {
+.restaurant-cards-container::after {
     content: "";
     flex: auto;
 }
@@ -163,4 +168,26 @@ body {
 
 .star-and-timing {
     padding: 1px;
+}
+
+.btn {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: 2px solid #388e3c;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: "Arial", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    background-color: #2e7d32; /* Even darker green when active */
+    transform: scale(1); /* No zoom on click */
 }
