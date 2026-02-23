@@ -70,6 +70,7 @@ Check the top-level render call using <div>. See https://reactjs.org/link/warnin
 
 ---
 # Homework
+---
 
 ## #1 How does Browser understand the JS commands?
 - The **Javascript Engine** is responsible to handle the Javascript code.
@@ -157,11 +158,59 @@ Check the top-level render call using <div>. See https://reactjs.org/link/warnin
     - May re-optimize later
     - This is called **speculative optimization**
      
-       
-      
+---     
+## #2 What are CDN?
+- Content Delivery Network
+- Fundamentally, A CDN brings content / service closer to the user.
+- To bring the content / service closer to the users, CDN deploys servers at hundreds of locations all over the world.
+- These **server locations** are called **POPs (Point of Presence)**.
+- A server inside a POP is called an **Edge server**.
+- There many CDN providers like Amazon cloudfront, Cloudflare, Akamai, Microsoft Azure CDN
+- Different CDNs use different technologies to direct a user's request to the closest POP.
+- Two common approach are:
+  - **DNS-based routing**
+  - **Anycast**
+- **DNS-based routing**
+  - Each POP has its own IP address
+  - When user looks up the IP address for the CDN, DNS returns the IP address of the POP closest to the IP address of the resolver (ISP DNS or Google DNS etc.)
+- **Anycast**
+  - All POPs share the same IP address
+  - When request comes in the Anycast N/W, the N/W sends the request to the POP closest to the requester (topologically nearest not necessarily geographically closest i.e. may be not nearest on the map but nearest in terms of network hops / routing path)
+- An Edge server acts as a reverse proxy with a huge content cache.
+- Primarily static content are cached in this content cache.
+- Modern CDNs can cache dynamic responses using cache keys, query-string rules, cookies, and API-level caching.
+- A content from the cache can be quickly returned to the user.
+- Only if a requested content is not in the cache, the Edge server asks the content from the original server. This reduces the load and bandwidth requirements of the original server cluster.
+- How CDN caching works?
+  - **Cache-Control Headers** – Origin defines caching rules via HTTP headers.
+  - **Cache Invalidation** – Content is removed via TTL expiry, purge APIs, or cache tags.
+  - **Origin Shield** – Intermediate regional cache layer to protect origin from stampede.
+  - **Cache Hit Ratio** – Metric measuring % of requests served from cache.
+- **Other benefits:**
+  - A modern CDN can transform static content into more optimized formats.
+    - CDN performs compression 
+    - Some provide optional minification like .js and .css ➡️ Minified files
+    - Old format Images (PNG, JPEG, GIF) ➡️ Modern format Images (WEBP, AVIF)
+    - Provide video in different resolution types like HD (720p), 2K(1152p), UHD(1080p), 4K(2160p)
+  - All TLS connections terminate at the Edge server
+    - The most common use of TLS is HTTPS
+    - TLS handshakes are expensive, it adds latency due to cryptographic negotiation and round trips
+    - It takes several round trips to establish
+    - Therefore, if a TLS connection terminates at the Edge server, it reduces
+      - Latency
+      - Load on origin
+      - Round-trip distance 
+    - Hence, even dynamic and uncacheable contents are sent over CDN.
+  - CDN also provides Security
+    - Since, CDNs have huge network capacity at the Edge servers.
+    - This is the key to providing effective DDOS protection against large-scale attacks.
+    - The solution is to have a network with a capacity much higher than the attackers.
+    - This is especially effective with a CDN built on an Anycast N/W.
+    - CDNs absorb and diffuse attack traffic across a globally distributed network, preventing overload at a single origin.
+  - A modern CDN improves availability
+    - A CDN by its nature is highly distributed.
+    - Therefore, having your content in many POPs, a CDN can withstand many more hardware failures than the original servers.
 
-
-## What are CDN?
 ## What is crossorigin? (Used inside script tag)
 ## What happens if multiple render are there? (experiment)
 ## What happens to elements above & below the target div? (experiment)
