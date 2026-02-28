@@ -154,7 +154,7 @@ npm install react
 ```
 - Command (shorthand):
 ```
-npm i react-dom
+npm i react
 ```
 - It will be installed and a new key is added in the package.json named **dependencies**.
 - An entry for the React will be done under **dependencies**.
