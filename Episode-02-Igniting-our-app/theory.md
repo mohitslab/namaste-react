@@ -308,7 +308,7 @@ npx parcel build index.html
 - `"last 2 Firefox version"`: It will support the last 2 firefox versions.
 - You can also give country specific entry etc.
 - This configuration means the App will definitely support the provided versions.
-- But more the entires more the builds created.
+- But more the entries more the builds created.
 - Therefore, the recommended way is to generalize the build to cover most browsers and also keep the build light.
 - Add following to the package.json
 ```
