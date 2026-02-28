@@ -66,7 +66,7 @@ npm init
         - `x` can be anything `>=2.3`
         - `1.2.4` & `1.3.0` etc. will match.
         - `2.0.0` will not match.
-- **Tilde (`^`)**
+- **Tilde (`~`)**
     - It allows updates within the same **minor version**.
     - It allows updates only for the **patch version** (or the **minor version** if no patch version is specified).
     - It restricts the updates to only **patch-level** changes.
