@@ -241,7 +241,7 @@ import ReactDOM from "react-dom/client";
     - Minification
     - Bundling
     - File compression
-    - Consistent Hashing
+    - **Consistent Hashing ???**
     - Code Splitting
     - Differential Bundling
         - Ability to support older browsers
