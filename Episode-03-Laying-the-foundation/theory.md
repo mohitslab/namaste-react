@@ -4,7 +4,7 @@
 - Therefore, in any new project to find the commands check the package.json and find the scripts key.
 - Create two scripts `start` & `build` and write the commands.
 - Updated package.json:
-```
+```json
 "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
