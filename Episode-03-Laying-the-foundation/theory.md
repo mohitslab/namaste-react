@@ -12,7 +12,7 @@
   },
 ```
 - Command (Development build and local server)
-```
+```shell
 npm run start
 ```
 - Command (Production build)
