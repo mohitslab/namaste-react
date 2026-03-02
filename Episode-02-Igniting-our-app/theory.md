@@ -23,6 +23,7 @@
 - npm does not have a fullform.
 - Although it is a package manager which manages Node packages.
 - npm is used to install **packages** or **dependencies**.
+- `yarn` is also another package manager.
 
 ## What is package.json?
 - It is a configuration file for the npm in JSON format.
@@ -98,6 +99,7 @@ npm install parcel
 ```
 npm install -D parcel
 ```
+> 📢 The `create-react-app` uses the **webpack** bundler.
 
 ## What are node_modules?
 - The Packages installed using npm are downloaded and kept as `node_modules`.
@@ -119,7 +121,8 @@ npm install -D parcel
 ## Should you keep the package.json and the package-lock.json in the GIT?
 - **Yes**
 - These files will be required to install the exact dependencies with their exact versions in the project.
-- Which will create the node_modules as well.
+- Which will create the **node_modules** as well.
+> 📢 Never touch `node_modules` and `package-lock.json`
 
 ## What is .gitignore file?
 - Some files are not required to be pushed to the GIT repository.
@@ -225,33 +228,38 @@ import ReactDOM from "react-dom/client";
 
 ## What parcel does?
 - Parcel does a lot of things under the hood like:
-    - Shows proper formatted errors
+    - **Diagnostics:** Shows proper formatted errors
     - Spins up a local development server on http://localhost:1234
     - Creates two folders viz. `.parcel-cache` & `dist`
         - `.parcel-cache` contains the cached files.
         - `dist` contains the development build.
         - `dist` contains `.html`, `.js` and `.js.map` files.
+        - Whenever a bundler builds the app, the build goes into this folder.
+        - The dist folder contains the minified and optimized version of source code.
+        - The dist folder also contains all the compiled modules that may or may not be used.
         - The `.js` files are different than our source code files but contains the content.
-    - Caching for faster builds.
+    - **Caching for faster builds**
         - Everytime you save a file, Parcel creates a cache of the build in the `.parcel-cache` folder, so next time the local server will spin even faster.
-    - HMR (Hot module replacement)
+    - **HMR (Hot module replacement)**
         - Automatically rendering the new code on the browser.
-        - It uses a **file watching algorithm** do HMR.
-    - Image Optimization
-    - Minification
-    - Bundling
-    - File compression
+        - It uses a **file watching algorithm (C++)** do HMR.
+        - The algorithm keeps track of all the files which are chaning in real-time and it tells the server to reload.
+    - **Image Optimization**
+    - **Minification**
+    - **Bundling**
+    - **File compression**
     - **Consistent Hashing ???**
     - Code Splitting
-    - Differential Bundling
+    - **Differential Bundling**
         - Ability to support older browsers
-    - Diagnostics
     - Error handling
-    - HTTPs
+    - **HTTPs on dev**
         - Ability to run the server as HTTPs
-    - Tree Shaking
+    - **Tree Shaking**
         - Remove unused code
-    - Different dev and prod builds
+        - In computer science, tree shaking is a dead code elimination technique that is applied when optimizing code.
+    - **Different dev and prod builds**
+    - **Zero Config:** All these features are done automatically in parcel without any config.
     - and many more... **Read Parcel documentation.**
 - > React apps are faster not just because React is fast but rather one of the main reason is Parcel. It works at the back to make React fast.
 - > All this information will be helpful in **System Design Interviews**.
