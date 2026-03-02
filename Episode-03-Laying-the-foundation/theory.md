@@ -64,6 +64,10 @@ const jsxHeading = <h1>Namaste React using JSX.</h1>;
 ## Babel
 - JS compiler and transpiler
 - `JSX` => Babel transpiles to core React i.e. `React.createElement` => ReactElement-JS Object => HTMLElement(render)
+- Therefore,
+  1. Using Babel, JSX ➡️ React.createElement
+  2. React understands `React.createElement` and this function creates a "React Element" which is a JS Object under the hood
+  3. On render, that JS Object converts into HTML
 - Apart from this Babel also converts older JS code to ES6 etc.
 - Read docs
 - Babel reads the code one-by-one.
@@ -81,8 +85,30 @@ const jsxHeading = <h1>Namaste React using JSX.</h1>;
 ## Assignment
 - Explore various attributes of various tags
 - Anchor tags
+```jsx
+const myLink = <a href="https://www.reactjs.org">My important Link</a>
+
+```
 - Image tag
-etc.
+```jsx
+const myImg = <img src={user.avatarUrl}></img>;
+
+```
+- Don’t put quotes around curly braces when embedding a JavaScript expression in an attribute.
+- Either use quotes (for string values) or curly braces (for expressions), but not both in the same attribute.
+- If a tag is empty, you may close it immediately with />, like XML:
+```jsx
+const element = <img src={user.avatarUrl} />;
+```
+- A JSX tag may contain children
+```jsx
+const element = (
+  <div>
+    <h1>Hello!</h1>
+    <h2>Good to see you here.</h2>
+  </div>
+);
+```
 
 
 ## VSCode extensions
