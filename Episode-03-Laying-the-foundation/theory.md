@@ -26,27 +26,27 @@ npm run build
 - There are React elements which are like to DOM elements but not equivalent.
 - React elements are Objects while DOM elements are HTML.
 - React Element:
-```
+```jsx
 React.createElement("h1", { "id": "heading"}, "Namaste React 🚀");
 ```
 - HTML Element:
-```
+```html
 <h1 id="heading">Namaste React 🚀</h1>
 ```
-- React Element > Object > HTML Element (render)
+- React Element ➡️ Object ➡️ HTML Element (render)
 - There is a common practice to display `Not Rendered` on the HTML, in-case React code doesn't work.
 
 ## JSX
 - `React.createElement` can make the code clumsy.
 - To make the code clean JSX was used in React.
 - JSX is seprate from React, it is not a part of React.
-- Frameworks like React tries to merge all the files viz. Markup files, logic etc.
+- Libraries (or Frameworks) like React tries to merge all the files viz. Markup files, logic etc.
 
 ## Create heading (JSX)
 - JSX is not HTML inside Javascript.
 - JSX is a HTML-like or XML-like syntax.
 - Command:
-```
+```jsx
 const jsxHeading = <h1>Namaste React using JSX.</h1>;
 ```
 - Elements created using `JSX` is equivalent to elements created using `React.createElement`.
