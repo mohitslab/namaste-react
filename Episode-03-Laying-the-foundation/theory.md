@@ -39,7 +39,7 @@ React.createElement("h1", { "id": "heading"}, "Namaste React 🚀");
 ## JSX
 - `React.createElement` can make the code clumsy.
 - To make the code clean JSX was used in React.
-- JSX is seprate from React, it is not a part of React.
+- **JSX is seprate from React, it is not a part of React.**
 - Libraries (or Frameworks) like React tries to merge all the files viz. Markup files, logic etc.
 
 ## Create heading (JSX)
