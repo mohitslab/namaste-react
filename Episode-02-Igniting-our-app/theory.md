@@ -143,7 +143,7 @@ npx parcel index.html
 ## Why not CDN links?
 - CDN is not a preferred way to import.
 - Having **React** or other packages in the `node_modules` is better because:
-    - Costly operation
+    - Costly operation: To fetch the React everytime via script
     - The URL will keep changing when packages upgrade.
 
 ## Install React & ReactDOM
