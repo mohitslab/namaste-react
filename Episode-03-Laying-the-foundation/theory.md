@@ -26,7 +26,7 @@ npm run build
 - There are React elements which are like to DOM elements but not equivalent.
 - React elements are Objects while DOM elements are HTML.
 - React Element:
-```jsx
+```js
 React.createElement("h1", { "id": "heading"}, "Namaste React 🚀");
 ```
 - HTML Element:
