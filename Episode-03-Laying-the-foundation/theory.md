@@ -12,11 +12,11 @@
   },
 ```
 - Command (Development build and local server)
-```shell
+```console
 npm run start
 ```
 - Command (Production build)
-```
+```console
 npm run build
 ```
 - Shorthand for `npm run start` is `npm start`. This shorthand is not valid of other commands.
