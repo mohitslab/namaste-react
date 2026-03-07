@@ -43,7 +43,7 @@
   - **Note:** Inline styles are not recommended.
   - Example:
 
-```
+```jsx
 const RestaurantCard = () => {
     return (
         <div className="restaurant-card" style={ {
@@ -67,7 +67,7 @@ const RestaurantCard = () => {
 - To capture it in the component, create a function argument in the React component.
 - Example:
 
-```
+```jsx
 // Component
 const Restaurant = (props) => {
     console.log(props);
@@ -88,7 +88,7 @@ const Restaurant = (props) => {
 
 - Using component
 
-```
+```jsx
 <div className="restaurant-container">
     <Restaurant name="Bakingo" rating="4.7" etd="15-20 mins" cuisines="Bakery, Desserts, Beverages, Snanks" location="Mansarovar"/>
 </div>
@@ -156,7 +156,7 @@ const Restaurant = (props) => {
 - **Map, Reduce, Filter:** It is better to use functional programming React as there will be simple data transformations. - Use Map over loop if you want to **transform & return** new Array. - Use Map over loop to keep the original Array immutable. - Use Map over loop to improve readability. - Use loop over Map if a slight performance improvement matters. - Use loop over Map if complex transformations, logging etc. are to be performed.
   Example:
 
-```
+```jsx
 // Bad practice
 const { restaurantInfo } = props;
 
@@ -202,7 +202,7 @@ const { restaurantInfo } = props;
 
 ![Key Warning](key_warning.png)
 
-```
+```jsx
 <div className="restaurant-container">
     {restaurantData?.card?.card?.gridElements?.infoWithStyle?.restaurants.map(
         restaurant => <Restaurant restaurantInfo={restaurant} key={restaurant?.info?.id} />
